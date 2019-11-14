@@ -1,0 +1,22 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+        <h1>Login</h1>
+        <p>Please fill out your credentials.</p>
+        {{#each messages}}
+        <div class={{class}}>
+            <p>{{text}}</p>
+        </div>
+        {{/each}}
+        <form action="/user/login" method="POST">
+            <div class="input-box">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="your email..." maxlength="45">
+            </div>
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="your password ..." maxlength="45">
+            </div>
+            <input type="submit" value="Login" class="btn btn-reverse">
+        </form>
+    </div>
+</section>
